@@ -1,14 +1,16 @@
 function isCharConstant(str) {
   const pattern = /[\w\W]/;
   const result = pattern.test(str);
-  console.log(str, "Is a valid character constant:", result);
+  return result;
+  //   console.log(str, "Is a valid character constant:", result);
 }
 
 function isStringConstant(str) {
   const pattern = /[\w\W]*/;
-
   const result = pattern.test(str);
-  console.log(str, "Is a valid string constant:", result);
+  return result;
+
+  //   console.log(str, "is a valid string constant:", result);
 }
 
 function isIdentifier(str) {
@@ -17,7 +19,9 @@ function isIdentifier(str) {
   const pattern =
     /^(?!(?:var|suppose|stable|add|sub|mul|div|pow|mod|now|peroid|do|stop|continue|and|or|not|weather|otherwise|true|false|fn|return|level|try|except|pass|null)$)[$A-Z_][0-9A-Z_$]*$/i;
   const result = pattern.test(str);
-  console.log(str, "Is a valid identifier:", result);
+  return result;
+
+  //   console.log(str, "is a valid identifier:", result);
 }
 
 function isReservedKeyword(str) {
@@ -26,7 +30,9 @@ function isReservedKeyword(str) {
   const pattern =
     /var|suppose|stable|add|sub|mul|div|pow|mod|now|peroid|do|stop|continue|and|or|not|weather|otherwise|true|false|fn|return|level|try|except|pass|null/;
   const result = pattern.test(str);
-  console.log(str, "Is a valid reserved keyword:", result);
+  return result;
+
+  //   console.log(str, "is a valid reserved keyword:", result);
 }
 
 function isIntConstant(str) {
@@ -34,21 +40,23 @@ function isIntConstant(str) {
   // const pattern = /^d+$/;
   const pattern = /^[0-9]+$/;
   const result = pattern.test(str);
-  console.log(str, "Is a valid integer constant:", result);
+  //   console.log(str, "is a valid integer constant:", result);
+  return result;
 }
 
 function isFloatConstant(str) {
   const pattern = /([+|-][0-9][.][0-9]+)|([0-9][.][0-9]+)/;
   const result = pattern.test(str);
-  console.log(str, "Is a valid Float constant:", result);
+  //   console.log(str, "is a valid float constant:", result);
+  return result;
 }
 
-// isCharConstant("\n");
-// isStringConstant("90");
-// isIdentifier("\n");
-// isReservedKeyword("\n");
-// isIntConstant("\n");
-// isFloatConstant("\n");
+isCharConstant("\n");
+isStringConstant("\n");
+isIdentifier("\n");
+isReservedKeyword("\n");
+isIntConstant("\n");
+isFloatConstant("\n");
 module.exports = {
   isCharConstant,
   isStringConstant,

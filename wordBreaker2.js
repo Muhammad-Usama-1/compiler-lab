@@ -1,5 +1,5 @@
 const fs = require("fs");
-const fileContent = fs.readFileSync("./text.txt", "utf-8");
+// const fileContent = fs.readFileSync("./text.txt", "utf-8");
 const operators = ["+", "-", "/", "*"];
 const punctuations = [",", ";", "="];
 let tokens = [];
@@ -10,6 +10,10 @@ function tokennizer(input) {
     let char = input[current];
     let WHITESPACE = /\s/;
     if (WHITESPACE.test(char)) {
+      if (lexeme) {
+        tokens.push(lexeme);
+        lexeme = "";
+      }
       current = current + 1;
       continue;
     }
@@ -18,11 +22,15 @@ function tokennizer(input) {
       current = current + 1;
     }
     if (operators.includes(char) || punctuations.includes(char)) {
-      tokens.push(lexeme);
-      lexeme = "";
+      if (lexeme) {
+        tokens.push(lexeme);
+        lexeme = "";
+      }
       current = current + 1;
     }
   }
+  return tokens;
 }
-tokennizer(fileContent);
-console.log(tokens);
+// console.log(tokennizer(fileContent));
+// console.log(tokens);
+module.exports = tokennizer;
