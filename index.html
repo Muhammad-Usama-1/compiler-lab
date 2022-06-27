@@ -4,57 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compiler Construction</title>
+    <title>Compiler | JS</title>
+    <style>
+      body {
+        line-height: 1.5;
+        margin: 0;
+        color: #fff;
+        flex-direction: column;
+        display: flex;
+        letter-spacing: 3px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(230, 6, 80);
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <script>
-      function validator(str) {
-        //Char Conatant
-        const regCharConstant = /[\w\W]/;
-        var validationCharConstant = regCharConstant.test(str);
-        console.log(
-          str,
-          "is a valid character constant:",
-          validationCharConstant
-        );
-
-        //String Constant
-        const regStringConstant = /[\w\W]*/;
-        var validationStringConstant = regStringConstant.test(str);
-        console.log(
-          str,
-          "is a valid string constant:",
-          validationStringConstant
-        );
-
-        //Identifier
-        const regIdentifier =
-          /^(?!(?:awt|brk|case|catch|class|const|cont|dbg|def|del|do|else|enum|expt|ext|false|fnl|for|fctn|if|impl|impt|in|instof|itf|let|new|null|pkg|pvt|ptd|pbc|rtn|spr|swi|stc|this|throw|try|true|typof|var|void|while|with|yield)$)[$A-Z_][0-9A-Z_$]*$/i;
-        var validationIdentifier = regIdentifier.test(str);
-        console.log(str, "is a valid identifier:", validationIdentifier);
-
-        //Reserved Keyword
-        const regReservedKeyword =
-          /awt|brk|case|catch|class|const|cont|dbg|def|del|do|else|enum|expt|ext|false|fnl|for|fctn|if|impl|impt|in|instof|itf|let|new|null|pkg|pvt|ptd|pbc|rtn|spr|swi|stc|this|throw|try|true|typof|var|void|while|with|yield/;
-        var validationReservedKeyword = regReservedKeyword.test(str);
-        console.log(
-          str,
-          "is a valid reserved keyword:",
-          validationReservedKeyword
-        );
-
-        //Int Constant
-        const regIntConstant = /([+|-][0-9]+)|([0-9]+)/;
-        var validationIntConstant = regIntConstant.test(str);
-        console.log(str, "is a valid integer constant:", validationIntConstant);
-
-        //Float Constant
-        const regFloatConstant = /([+|-][0-9][.][0-9]+)|([0-9][.][0-9]+)/;
-        var validationFloatConstant = regFloatConstant.test(str);
-        console.log(str, "is a valid float constant:", validationFloatConstant);
-      }
-
-      validator("if");
-    </script>
+    <h1>COMPILER CONSTRUCTION ASSIGNMENT</h1>
+    <p>
+      &copy; by
+      <a href="https://github.com/Muhammad-Usama-1"> Muhammad Usama </a>
+    </p>
   </body>
 </html>
